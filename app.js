@@ -30,6 +30,13 @@ let restartbtn = document.querySelectorAll('#restart');
 
 let winscreen = document.getElementById('win');
 
+let startbtn = document.getElementById('start')
+let startscreen = document.getElementById('startscreen')
+
+startbtn.addEventListener('click', function () {
+    startscreen.classList.add('d-none')
+})
+
 
 flag.addEventListener('click', function() {
     handleflag('flag')
@@ -105,6 +112,27 @@ for (let i = 0; i < mine_number; i++) {
 
 // all boxes
 let boxes = document.querySelectorAll('.box')
+boxes.forEach(function (item, index) {
+    item.addEventListener('contextmenu', function (ev) {
+        ev.preventDefault()
+        // console.log(item);
+        if (item.getAttribute('flagged') == 'true') {
+            flagcount++
+            flagnumber.innerText = flagcount
+            item.removeChild(item.firstElementChild);
+            item.setAttribute('flagged', 'false')
+        } else if (item.getAttribute('disabled') != 'true' && flagcount > 0) {
+            flagcount--
+            flagnumber.innerText = flagcount
+            let img = document.createElement('img');
+            img.setAttribute('src', flagicon)
+            img.id = 'flag'
+            item.appendChild(img)
+            item.setAttribute('flagged', 'true')
+        }
+    })
+})
+
 boxes.forEach(function (item, index) {
     item.addEventListener('click', function () {
         handleclick(item)

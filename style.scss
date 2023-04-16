@@ -1,36 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
 .mainwrap {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .cont {
-    width: 400px;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#startscreen {
+  max-height: 540px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .box {
-    width: 40px;
-    height: 40px;
-    // background-color: blue;
-    outline: solid 1px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        width: 70%;
-        height: auto;
-    }
+  width: 40px;
+  height: 40px;
+  // background-color: blue;
+  outline: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 70%;
+    height: auto;
+  }
 }
 
 // // .cursor {
@@ -54,29 +63,26 @@
 // //     }
 // // }
 
-
-
-
-.number[id='1'] {
-    color: blue;
+.number[id="1"] {
+  color: blue;
 }
 
-.number[id='2'] {
-    color: green;
+.number[id="2"] {
+  color: green;
 }
 
-.number[id='3'] {
-    color: red;
+.number[id="3"] {
+  color: red;
 }
 
-.number[id='4'] {
-    color: purple;
+.number[id="4"] {
+  color: purple;
 }
 
-.number[id='5'] {
-    color: gold;
+.number[id="5"] {
+  color: gold;
 }
 
-.number[id='0'] {
-    opacity: 0;
+.number[id="0"] {
+  opacity: 0;
 }
