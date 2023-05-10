@@ -1,29 +1,20 @@
 body {
-    width: 100%;
-    height: 100vh;
-}
-.loading {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: white;
+    min-height: 100vh;
 }
 
-.maincont {
-    z-index: 999;
+.textconatiner {
+    min-height: 100vh;
     color: white;
+    z-index: 999;
 }
 
-.background {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.288);
-  border-radius: 5px;
-  padding: 10px;
+.blured {
+    background-color: rgba(0, 0, 0, 0.178);
+    outline: black 1px solid;
+    padding: 10px;
+    border-radius: 5px;
 }
+
 
 @mixin sp-layout {
     @media screen and (max-width: 750px) {
